@@ -11,3 +11,19 @@
 2026-01-21 10:17:53,541 - __main__ - INFO - Analyzing error distribution...
 2026-01-21 10:17:53,649 - __main__ - INFO - Analysis completed in 0.31 seconds
 2026-01-21 10:18:02,913 - __main__ - INFO - Reports generated successfully
+2026-01-21 10:52:42,640 - __main__ - INFO - Starting analysis of logs\server.log
+2026-01-21 10:52:42,640 - __main__ - INFO - Parsing log file: logs\server.log
+2026-01-21 10:52:42,742 - __main__ - INFO - Parsed 46547 valid log entries
+2026-01-21 10:52:42,743 - __main__ - INFO - Skipped 0 invalid/malformed entries
+2026-01-21 10:52:42,744 - __main__ - INFO - Analyzing error distribution...
+2026-01-21 10:52:42,819 - __main__ - INFO - Analysis saved to database with ID: 1
+2026-01-21 10:52:42,819 - __main__ - INFO - Analysis completed in 0.16 seconds
+2026-01-21 10:53:22,411 - __main__ - INFO - Reports generated successfully
+2026-01-21 10:56:37,052 - __main__ - INFO - Starting analysis of logs\server.log
+2026-01-21 10:56:37,052 - __main__ - INFO - Parsing log file: logs\server.log
+2026-01-21 10:56:37,153 - __main__ - INFO - Parsed 46554 valid log entries
+2026-01-21 10:56:37,153 - __main__ - INFO - Skipped 0 invalid/malformed entries
+2026-01-21 10:56:37,154 - __main__ - INFO - Analyzing error distribution...
+2026-01-21 10:56:37,230 - __main__ - INFO - Analysis saved to database with ID: 1
+2026-01-21 10:56:37,230 - __main__ - INFO - Analysis completed in 0.16 seconds
+2026-01-21 10:56:40,820 - __main__ - INFO - Reports generated successfully

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Analysis Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Log Analysis Dashboard</h1>
+            <p class="subtitle">Real-time monitoring of server log analysis</p>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3><i class="fas fa-database"></i> Total Analyses</h3>
+                <p class="stat-number">{{ stats.total_runs if stats else 0 }}</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3><i class="fas fa-bug"></i> Avg Error Rate</h3>
+                <p class="stat-number">{{ "%.2f"|format(stats.avg_error_rate) if stats else 0 }}%</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3><i class="fas fa-clock"></i> Last Run</h3>
+                <p class="stat-number">
+                    {% if stats.last_run %}
+                        {{ stats.last_run.timestamp[:16] }}
+                    {% else %}
+                        Never
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        
+        {% if trend_chart %}
+        <div class="chart-container">
+            <h2><i class="fas fa-chart-line"></i> Error Rate Trend</h2>
+            <img src="{{ trend_chart }}" alt="Error Rate Trend Chart">
+        </div>
+        {% endif %}
+        
+        <div class="recent-analyses">
+            <h2><i class="fas fa-history"></i> Recent Analyses</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Total Requests</th>
+                            <th>Total Errors</th>
+                            <th>Error Rate</th>
+                            <th>Execution Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for analysis in recent_analyses %}
+                        <tr>
+                            <td>{{ analysis.timestamp[:19] }}</td>
+                            <td>{{ "{:,}".format(analysis.total_requests) }}</td>
+                            <td>{{ "{:,}".format(analysis.total_errors) }}</td>
+                            <td>{{ "%.2f"|format(analysis.error_rate) }}%</td>
+                            <td>{{ "%.2f"|format(analysis.execution_time) }}s</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Log Analyzer Dashboard • Auto-refresh every 60 seconds</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Auto-refresh dashboard every 60 seconds
+        setTimeout(() => {
+            window.location.reload();
+        }, 60000);
+    </script>
+</body>
+</html>

@@ -5,3 +5,5 @@ tqdm>=4.65.0  # For progress bars
 python-dotenv>=1.0.0  # For configuration
 faker>=18.0.0  # For generating fake data
 seaborn=0.13.2
+flask>=2.3.0
+sqlalchemy>=2.0.0

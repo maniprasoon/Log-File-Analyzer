@@ -11,6 +11,7 @@ from tqdm import tqdm
 from log_parser import LogParser
 from config import INPUT_LOG, ANALYSIS_LOG, CHUNK_SIZE
 from report_generator import ReportGenerator
+from database import db_manager
 
 # Configure logging for audit trail
 logging.basicConfig(
@@ -65,6 +66,11 @@ class LogAnalyzer:
                 'execution_time': time.time() - start_time
             }
             
+            try:
+                record_id = db_manager.save_analysis(analysis_results)
+                logger.info(f"Analysis saved to database with ID: {record_id}")
+            except Exception as e:
+                logger.error(f"Failed to save to database: {e}")
             logger.info(f"Analysis completed in {self.results['execution_time']:.2f} seconds")
             
             return self.results
