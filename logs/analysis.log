@@ -1,0 +1,13 @@
+2026-01-21 10:09:13,437 - __main__ - INFO - Starting analysis of logs\server.log
+2026-01-21 10:09:13,437 - __main__ - INFO - Parsing log file: logs\server.log
+2026-01-21 10:09:13,614 - __main__ - INFO - Parsed 46630 valid log entries
+2026-01-21 10:09:13,614 - __main__ - INFO - Skipped 0 invalid/malformed entries
+2026-01-21 10:09:13,620 - __main__ - INFO - Analyzing error distribution...
+2026-01-21 10:09:13,707 - __main__ - INFO - Analysis completed in 0.27 seconds
+2026-01-21 10:17:53,338 - __main__ - INFO - Starting analysis of logs\server.log
+2026-01-21 10:17:53,338 - __main__ - INFO - Parsing log file: logs\server.log
+2026-01-21 10:17:53,534 - __main__ - INFO - Parsed 46630 valid log entries
+2026-01-21 10:17:53,534 - __main__ - INFO - Skipped 0 invalid/malformed entries
+2026-01-21 10:17:53,541 - __main__ - INFO - Analyzing error distribution...
+2026-01-21 10:17:53,649 - __main__ - INFO - Analysis completed in 0.31 seconds
+2026-01-21 10:18:02,913 - __main__ - INFO - Reports generated successfully

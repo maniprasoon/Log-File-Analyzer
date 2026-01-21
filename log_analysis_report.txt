@@ -1,0 +1,41 @@
+======================================================================
+SERVER LOG ANALYSIS REPORT
+======================================================================
+Generated: 2026-01-21 10:17:53
+Log File: server.log
+
+SUMMARY STATISTICS
+----------------------------------------
+Total Requests: 46,630
+Total Errors: 7,176
+Error Rate: 15.39%
+
+ERROR CODE DISTRIBUTION
+----------------------------------------
+HTTP 502: 1,060 occurrences
+HTTP 403: 1,042 occurrences
+HTTP 404: 1,037 occurrences
+HTTP 400: 1,032 occurrences
+HTTP 503: 1,016 occurrences
+HTTP 401: 996 occurrences
+HTTP 500: 993 occurrences
+
+TOP 5 IP ADDRESSES WITH ERRORS
+----------------------------------------
+999.999.999.999: 184 errors
+182.112.112.18: 1 errors
+84.225.153.63: 1 errors
+193.3.167.248: 1 errors
+83.139.30.34: 1 errors
+
+REQUEST METHOD DISTRIBUTION
+----------------------------------------
+GET: 32,780 (70.3%)
+POST: 6,930 (14.9%)
+DELETE: 2,355 (5.1%)
+HEAD: 2,299 (4.9%)
+PUT: 2,266 (4.9%)
+
+======================================================================
+END OF REPORT
+======================================================================
